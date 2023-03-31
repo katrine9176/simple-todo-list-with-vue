@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Todo app</title>
+</head>
+
+<body>
+  
+  <main>
+    <section id="todo" class="todo">
+      <h1>todo list</h1>
+      <input type="text" v-model="enteredTodoValue">
+      <button class="btn" @click="addTodo">add todo</button>
+      <h2>todos:</h2>
+      <p v-if="todos.length === 0">Enter goal!</p>
+      <ul v-else>
+        <li v-for="todo in todos">{{todo}}</li>
+      </ul>
+    </section>
+  </main>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
