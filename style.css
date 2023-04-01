@@ -51,11 +51,11 @@ input,
 
 .btn {
 	transition: opacity 0.3s;
+  cursor: pointer;
 }
 
 .btn:hover {
 	opacity: 60%;
-	cursor: pointer;
 }
 
 input {
@@ -75,9 +75,27 @@ ul {
 }
 
 ul li {
+  position: relative;
   margin: 0.5em 0;
   padding: 0.7em;
   width: 90%;
   border-radius: 15px;
   background-color: #bfb4b4;
+}
+
+ul li button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 2em;
+  font-size: 2rem;
+  color: red;
+  background: none;
+  border: none;
+  transition: opacity 70%;
+  cursor: pointer;
+}
+
+ul li button:hover {
+  opacity: 70%;
 }

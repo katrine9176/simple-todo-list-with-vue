@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <title>Todo app</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/4b1e4d2041.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,12 +23,13 @@
       <h2>todos:</h2>
       <p v-if="todos.length === 0">Enter goal!</p>
       <ul v-else>
-        <li v-for="todo in todos">{{todo}}</li>
+        <li v-for="(todo, idx) in todos">{{todo}}<button @click="removeTodo()"><i class="fa-sharp fa-solid fa-xmark"></i></button></li>
       </ul>
     </section>
   </main>
   
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
   <script type="module" src="script.js"></script>
 </body>
 
