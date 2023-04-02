@@ -23,7 +23,7 @@
       <h2>todos:</h2>
       <p v-if="todos.length === 0">Enter goal!</p>
       <ul v-else>
-        <li v-for="(todo, idx) in todos">{{todo}}<button @click="removeTodo()"><i class="fa-sharp fa-solid fa-xmark"></i></button></li>
+        <li v-for="(todo, idx) in todos">{{todo}}<button @click="removeTodo(idx)"><i class="fa-sharp fa-solid fa-xmark"></i></button></li>
       </ul>
     </section>
   </main>
